@@ -28,7 +28,7 @@ class Quota extends Plugin {
         if ($over > 0) {
             $title   = 'Trop de flux !';
             $content = "Vous avez dépassé la limite de ".FEED_QUOTA." flux RSS.\\nVeuillez supprimer au moins $over flux pour continuer à utiliser Framanews.";
-            return "alert('$title\\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\\n$content');";
+            return "alert('$title\\n-------------------------------------\\n$content');";
         } else {
             return '';
         }
