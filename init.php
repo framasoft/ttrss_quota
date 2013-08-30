@@ -13,13 +13,11 @@ class Quota extends Plugin {
     function init($host) {
         $this->dbh = $host->get_dbh();
         $this->host = $host;
-
-        $host->add_hook($host::HOOK_TOOLBAR_BUTTON, $this);
     }
 
-    function HOOK_TOOLBAR_BUTTON() {
+    function get_js() {
         if ($this->over_quota() > 0) {
-            print '<script>window.location.href = "prefs.php";</script>';
+            print 'window.location.href = "prefs.php";';
         }
     }
 
